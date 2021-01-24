@@ -1,13 +1,13 @@
 module.exports = function transform(title, description, author, coverId, subjects) {
-    let finalDesc;
+    let finalDesc = "";
     if (typeof (description) === "object") {
-        desc = description.value;
+        finalDesc = description.value;
     }
-    else if (typeof (descripton) === "undefined") {
+    else if (typeof (description) === "undefined") {
         finalDesc = "No Description."
     }
     else {
-        finalDesc = description.value;
+        finalDesc = description;
     }
 
     let finalAuthor;

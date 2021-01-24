@@ -30,8 +30,8 @@ app.get("/subjects/:subject", function (req, res) {
         })
         .then(axios.spread((...resp) => {
             works.forEach((work, i) => {
-                console.log(resp[i].data.description);
                 let book = bookTransformer(work.title, resp[i].data.description, work.authors, work.cover_id, work.subject);
+                console.log(book.description);
                 books.push(book);
             });
         }))
