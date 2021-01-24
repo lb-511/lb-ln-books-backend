@@ -7,7 +7,7 @@ module.exports = function transform(title, description, author, coverId, subject
         finalDesc = "No Description."
     }
     else {
-        finalDesc = description;
+        finalDesc = description.value;
     }
 
     let finalAuthor;
