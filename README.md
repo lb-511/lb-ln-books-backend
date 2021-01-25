@@ -8,7 +8,7 @@
 Base Url: [https://lb-ln-books-backend.herokuapp.com](https://lb-ln-books-backend.herokuapp.com)
 
 ### Mögliche Anfragen
-- `GET /subjects/:my_subject`
+- `GET /books/:my_subject`
   - Liefert alle bücher aus my_subject
   - parameter: my_subject
   
