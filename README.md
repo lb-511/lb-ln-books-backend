@@ -46,7 +46,7 @@ lb-ln-books-backend/
 ```
 
 Der `bookTransformer.js` exportiert jeglich eine Funktion, welche aus gegebenen Daten ein Buch zusammenstellt, wie wir es im Frontend verwenden wollen.
-Umgelagert in eine einzelne Datei haben wir das, weil wir etwas ***Modularisierung*** haben wollten.
+Umgelagert in eine einzelne Datei haben wir das, weil wir etwas Modularisierung haben wollten.
 
 
 ## Project Setup
