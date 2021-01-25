@@ -17,7 +17,7 @@ app.use(log);
 
 
 //Endpoints
-app.get("/subjects/:subject", function (req, res) {
+app.get("/books/:subject", function (req, res) {
     let works;
     let books = [];
     console.log(req.params);
