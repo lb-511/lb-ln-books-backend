@@ -20,18 +20,15 @@ app.use(log);
 app.get("/books/:subject", function (req, res) {
     let works;
     let books = [];
-    console.log(req.params);
     axios.get(`http://openlibrary.org/subjects/${req.params.subject}.json?limit=100`)
         .then((resp) => {
             works = resp.data.works;
-
             return axios.all(works.map((tmp) => axios.get(`http://openlibrary.org${tmp.key}.json`)
             ))
         })
         .then(axios.spread((...resp) => {
             works.forEach((work, i) => {
                 let book = bookTransformer(work.title, resp[i].data.description, work.authors, work.cover_id, work.subject);
-                console.log(book.description);
                 books.push(book);
             });
         }))
