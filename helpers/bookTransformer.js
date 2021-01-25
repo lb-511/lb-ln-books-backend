@@ -18,14 +18,26 @@ module.exports = function transform(title, description, author, coverId, subject
         finalAuthor = author[0].name;
     }
 
-    let book = {
-        title: title,
-        description: finalDesc,
-        covers: {
+    let finalCovers;
+    if (coverId === null) {
+        finalCovers = {
+            L: "https://blog.springshare.com/wp-content/uploads/2010/02/nc-md.gif",
+            M: "https://blog.springshare.com/wp-content/uploads/2010/02/nc-md.gif",
+            S: "https://blog.springshare.com/wp-content/uploads/2010/02/nc-md.gif",
+        }
+    }
+    else {
+        finalCovers = {
             L: `http://covers.openlibrary.org/b/id/${coverId}-L.jpg`,
             M: `http://covers.openlibrary.org/b/id/${coverId}-M.jpg`,
             S: `http://covers.openlibrary.org/b/id/${coverId}-S.jpg`,
-        },
+        }
+    }
+
+    let book = {
+        title: title,
+        description: finalDesc,
+        covers: finalCovers,
         author: finalAuthor,
         subjects: subjects,
     };
