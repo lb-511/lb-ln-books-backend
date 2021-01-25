@@ -1,8 +1,8 @@
 # lb-ln-books-backend
 
 ## Gruppenmitglieder
- - Leon Baumann
- - Laura Niechoj
+ - Leon Baumann, 32022
+ - Laura Niechoj, 32028
  
 ## Rest API Url
 Base Url: [https://lb-ln-books-backend.herokuapp.com](https://lb-ln-books-backend.herokuapp.com)
